@@ -1,1276 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.mainPageTests" tests="7" skipped="1" failures="2" errors="0" timestamp="2026-03-01T11:06:14" hostname="ZAGREY" time="27.853">
+<testsuite name="tests.mainPageTests" tests="6" skipped="1" failures="4" errors="0" timestamp="2026-03-03T21:16:23.154Z" hostname="ZAGREY" time="27.77">
   <properties/>
-  <testcase name="Проверка кликабельности Stats" classname="tests.mainPageTests" time="4.837"/>
+  <testcase name="Проверка кликабельности Stats" classname="tests.mainPageTests" time="4.78"/>
   <testcase name="Ошибочная авторизация пользователя" classname="tests.mainPageTests" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="Попытка" classname="tests.mainPageTests" time="4.842">
-    <failure message="Element not found {#email}&#13;&#10;Expected: editable&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363184002.0.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363184002.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#email&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {#email}
-Expected: editable
-Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363184002.0.png
-Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363184002.0.html
+  <testcase name="Проверка основных элементов страницы" classname="tests.mainPageTests" time="4.869">
+    <failure message="com.codeborne.selenide.ex.ElementNotFound: Element not found {.colCon}&#13;&#10;Expected: text &quot;TODAY'S MATCHES&quot;&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572596348.0.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572596348.0.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.colCon&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {.colCon}
+Expected: text &quot;TODAY'S MATCHES&quot;
+Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572596348.0.png
+Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572596348.0.html
 Timeout: 4 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#email&quot;}
-	at app//com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
-	at app//com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
-	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
-	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
-	at app//com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsEditable(WebElementSource.java:178)
-	at app//com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:52)
-	at app//com.codeborne.selenide.commands.SetValue.execute(SetValue.java:38)
-	at app//com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
-	at app//com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
-	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
-	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
-	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
-	at app/jdk.proxy3/jdk.proxy3.$Proxy37.setValue(Unknown Source)
-	at app//tests.mainPageTests.Trying(MainPageTests.java:87)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#email&quot;}
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.colCon&quot;}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy38.shouldHave(Unknown Source)
+	at pages.MainPage.CheckMidBar(MainPage.java:18)
+	at tests.mainPageTests.CheckMidElements(MainPageTests.java:38)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.colCon&quot;}
   (Session info: chrome=145.0.7632.117)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f964755c7441ff84303fc1a1f85fe820, findElement {using=css selector, value=#email}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\garri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52444}, goog:processID: 12360, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52444/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f964755c7441ff84303fc1a1f85fe820
-	at jdk.internal.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
-	at java.base@17.0.12/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@17.0.12/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base@17.0.12/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
-	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
-	at app//com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
-	at app//com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
-	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
+Command: [889d0546b1e03ed935a1a15a6ea4b54d, findElement {value=.colCon, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\garri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58944}, goog:processID: 16776, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58944/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 889d0546b1e03ed935a1a15a6ea4b54d
+	at jdk.internal.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
 	... 10 more
 </failure>
   </testcase>
-  <testcase name="Проверка основных элементов страницы" classname="tests.mainPageTests" time="4.703"/>
-  <testcase name="Проверка кликабельности Results" classname="tests.mainPageTests" time="5.35">
-    <failure message="Element should have text &quot;Featured results&quot; {.widthControl}&#13;&#10;Element: '&lt;div class=&quot;widthControl&quot;&gt;Results&#10;1 - 100 of 115795&#10;Results for March 1st 2026&#10;Metizport&#10;2 - 0&#10;aimclub&#10;Exort Meteor Season 2&#10;bo3&#10;Legion&#10;2 - 1&#10;THUNDER dOWNUNDER&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;Legion&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;LAG&#10;2 - 0&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Wildcard&#10;0 - 2&#10;Voca&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;RED Canids&#10;1 - 2&#10;9z&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Fisher College&#10;1 - 2&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Yawara&#10;0 - 2&#10;Imperial&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Aether&#10;0 - 1&#10;LAG&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;def&#10;ShindeN&#10;2 - 0&#10;ex-KRÜ&#10;FiRe CONTER Season 2&#10;bo3&#10;Galorys&#10;0 - 2&#10;MIBR&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;9z&#10;2 - 1&#10;Fluxo&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Vasco&#10;0 - 2&#10;Isurus&#10;CCT Season 3 South America Series 9&#10;bo3&#10;Sashi&#10;2 - 1&#10;Omega&#10;JB Pro League Season 2&#10;bo3&#10;Aurora Young Blud&#10;0 - 2&#10;yngods&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;BetBoom&#10;1 - 2&#10;Inner Circle&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;HEROIC&#10;2 - 1&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Imperial&#10;2 - 1&#10;Bounty Hunters&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Procyon&#10;2 - 0&#10;Isurus&#10;FiRe CONTER Season 2&#10;bo3&#10;Oxuji&#10;2 - 0&#10;8Sins&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Atreides&#10;2 - 1&#10;brazylijski luz&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;Acend&#10;2 - 1&#10;Oramond&#10;A1 Gaming League Season 11&#10;bo3&#10;Results for February 28th 2026&#10;Rebels&#10;2 - 1&#10;SAW&#10;Master League Portugal Season 18&#10;bo3&#10;UNiTY&#10;2 - 1&#10;WW&#10;European Pro League Series 5&#10;bo3&#10;ex-Fingers Crossed&#10;1 - 2&#10;los kogutos&#10;JB Pro League Season 2&#10;bo3&#10;EYEBALLERS&#10;1 - 2&#10;FOKUS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;Aurora Young Blud&#10;1 - 2&#10;HAVU&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Yawara&#10;2 - 1&#10;Keyd Stars&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;R2&#10;1 - 2&#10;paiN Academy&#10;CCT Season 3 South America Series 9&#10;bo3&#10;LP&#10;1 - 0&#10;METANOIA&#10;CCT Season 3 South America Series 9&#10;def&#10;ASTRAL&#10;0 - 2&#10;Leo&#10;NODWIN Clutch Series 5&#10;bo3&#10;ECSTATIC&#10;2 - 0&#10;HYPERSPIRIT&#10;A1 Gaming League Season 11&#10;bo3&#10;KOLESIE&#10;2 - 1&#10;WW&#10;JB Pro League Season 2&#10;bo3&#10;FlyQuest&#10;0 - 2&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;QWENTRY&#10;2 - 0&#10;Acend&#10;European Pro League Series 5&#10;bo3&#10;Ursa&#10;0 - 2&#10;los kogutos&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Tricked&#10;0 - 2&#10;Inner Circle&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;MOUZ NXT&#10;0 - 2&#10;WHITEBIRD&#10;NODWIN Clutch Series 5&#10;bo3&#10;Famalicão&#10;0 - 2&#10;Fuzos&#10;Master League Portugal Season 18&#10;bo3&#10;ALGO&#10;1 - 2&#10;Omega&#10;European Pro League Series 5&#10;bo3&#10;AM&#10;2 - 1&#10;SPARTA&#10;NODWIN Clutch Series 5&#10;bo3&#10;9INE&#10;0 - 2&#10;BetBoom&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;QWENTRY&#10;2 - 0&#10;MASONIC&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;The Huns&#10;2 - 0&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;Lazer Cats&#10;1 - 0&#10;Fuzos&#10;JB Pro League Season 2&#10;def&#10;THUNDER dOWNUNDER&#10;0 - 3&#10;Mindfreak&#10;CCT Season 3 Oceania Series 4&#10;bo5&#10;BMZ&#10;0 - 2&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;THUNDER dOWNUNDER&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;RED Canids&#10;1 - 2&#10;Sharks&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;LAG&#10;0 - 2&#10;Voca&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Wildcard&#10;2 - 0&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;MIBR&#10;2 - 0&#10;Bounty Hunters&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Sakura&#10;0 - 2&#10;Aether&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;FlyQuest RED&#10;0 - 2&#10;Fisher College&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;ODDIK&#10;0 - 2&#10;Fluxo&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Galorys&#10;2 - 0&#10;Keyd Stars&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Crashers&#10;2 - 0&#10;UNO MILLE&#10;CCT Season 3 South America Series 9&#10;bo3&#10;paiN Academy&#10;0 - 2&#10;RED Canids Academy&#10;Liga Gamers Club 2026 Serie A February Cup&#10;bo3&#10;Inner Circle&#10;1 - 2&#10;FOKUS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;yngods&#10;2 - 0&#10;Drama&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;Leo&#10;0 - 2&#10;WW&#10;JB Pro League Season 2&#10;bo3&#10;TDK&#10;1 - 2&#10;WHITEBIRD&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;Marsborne&#10;0 - 2&#10;9z&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Pigeons&#10;1 - 2&#10;8Sins&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Players&#10;2 - 0&#10;Damajuana&#10;CCT Season 3 South America Series 9&#10;bo3&#10;ShindeN&#10;0 - 1&#10;Imperial&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;def&#10;100 Thieves&#10;2 - 0&#10;Eternal Fire&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;HEROIC&#10;2 - 0&#10;FlyQuest&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Results for February 27th 2026&#10;fnatic&#10;1 - 2&#10;BetBoom&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;9INE&#10;1 - 2&#10;EYEBALLERS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;ex-Fingers Crossed&#10;2 - 1&#10;ENCE Academy&#10;JB Pro League Season 2&#10;bo3&#10;Aurora Young Blud&#10;2 - 0&#10;G2 Ares&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;ASTRAL&#10;2 - 0&#10;OlyBet&#10;NODWIN Clutch Series 5&#10;bo3&#10;Bad Luck&#10;2 - 0&#10;ALZON&#10;CCT Season 3 South America Series 9&#10;bo3&#10;SINNERS&#10;0 - 2&#10;WHITEBIRD&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;ENCE&#10;0 - 2&#10;Eternal Fire&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;CYBERSHOKE&#10;0 - 2&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Leo&#10;0 - 2&#10;WW&#10;NODWIN Clutch Series 5&#10;bo3&#10;NOVAQ&#10;2 - 1&#10;Omega&#10;Myskill Pro League Series 2&#10;bo3&#10;BMZ&#10;0 - 2&#10;The Huns&#10;MESA Pro Series Winter 2026&#10;bo3&#10;WATERMELON&#10;1 - 2&#10;HOTU&#10;Myskill Pro League Series 2&#10;bo3&#10;Fuzos&#10;0 - 2&#10;HAVU&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;KOLESIE&#10;2 - 0&#10;ARCRED&#10;JB Pro League Season 2&#10;bo3&#10;Legion&#10;2 - 0&#10;ScarX&#10;PGL Bucharest 2026 West Asia Closed Qualifier&#10;bo3&#10;ENCE Academy&#10;0 - 1&#10;MASONIC&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;def&#10;K27&#10;0 - 2&#10;TDK&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;Ground Zero&#10;0 - 2&#10;Mindfreak&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;AM&#10;0 - 2&#10;ex-RUBY&#10;NODWIN Clutch Series 5&#10;bo3&#10;Rare Atom&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 East Asia Closed Qualifier&#10;bo3&#10;ENCE Academy&#10;2 - 0&#10;Lazer Cats&#10;European Pro League Series 5&#10;bo3&#10;Tricked&#10;2 - 0&#10;MOUZ NXT&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;Sashi&#10;2 - 0&#10;VP.Prodigy&#10;JB Pro League Season 2&#10;bo3&#10;Mindfreak&#10;2 - 1&#10;Abyssal&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;los kogutos&#10;2 - 0&#10;brazylijski luz&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;HOTU&#10;1 - 2&#10;Omega&#10;Myskill Pro League Series 2&#10;bo3&#10;WATERMELON&#10;1 - 2&#10;NOVAQ&#10;Myskill Pro League Series 2&#10;bo3&#10;Biryani&#10;1 - 2&#10;ScarX&#10;PGL Bucharest 2026 West Asia Closed Qualifier&#10;bo3&#10;THUNDER dOWNUNDER&#10;2 - 1&#10;Ground Zero&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;NEXVOID&#10;0 - 2&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;The Huns&#10;2 - 0&#10;Lynn Vision&#10;PGL Bucharest 2026 East Asia Closed Qualifier&#10;bo3&#10;1 - 100 of 115795&#10;FILTERS&#10;Stars&#10;All&#10;&#10;&#10;&#10;&#10;&#10;Time&#10;All time&#10;Last month&#10;Last 3 months&#10;Last 6 months&#10;Last 12 months&#10;2026&#10;2025&#10;2024&#10;2023&#10;2022&#10;2021&#10;2020&#10;2019&#10;2018&#10;2017&#10;2016&#10;2015&#10;2014&#10;2013&#10;2012&#10;Match type&#10;Map&#10;Event&#10;Player&#10;Team&#10;Game&#10;Valve ranked&#10;RECENT ACTIVITY&#10;Oramond vs illwill&#10;3&#10;Donk 95 kills on Faceit&#10;66&#10;kl1m's loan&#10;3&#10;PARIVISION vs SemperFi&#10;63&#10;Falcons: -TeSeS&#10;54&#10;ENCE Academy vs WW&#10;21&#10;HEROIC vs NRG&#10;57&#10;Senzu will implode and PassionUA will lose&#10;17&#10;Valve lawsuit&#10;262&#10;Falcons fix&#10;15&#10;magic vs TDK&#10;4&#10;Freed from the shackles of an academy, FUT have broken through&#10;42&#10;Donk 95 kills&#10;20&#10;ESL come here&#10;15&#10;Will anybody catch Niko&#10;182&#10;Fuzos vs Rebels&#10;5&#10;Astralis vs Monte&#10;16&#10;Short news: Week 8&#10;292&#10;HEROIC win DraculaN Season 5&#10;29&#10;Johnny Speeds complete lineup with nawwk&#10;26&#10;MINIGAME&#10;Timeline&#10;Play&#10;TOP 30 TRANSFERS&#10;BENCH&#10;BENCH&#10;BENCH&#10;SUB&#10;All transfers&lt;/div&gt;'&#13;&#10;Actual value: text=&quot;Results&#10;1 - 100 of 115795&#10;Results for March 1st 2026&#10;Metizport&#10;2 - 0&#10;aimclub&#10;Exort Meteor Season 2&#10;bo3&#10;Legion&#10;2 - 1&#10;THUNDER dOWNUNDER&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;Legion&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;LAG&#10;2 - 0&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Wildcard&#10;0 - 2&#10;Voca&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;RED Canids&#10;1 - 2&#10;9z&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Fisher College&#10;1 - 2&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Yawara&#10;0 - 2&#10;Imperial&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Aether&#10;0 - 1&#10;LAG&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;def&#10;ShindeN&#10;2 - 0&#10;ex-KRÜ&#10;FiRe CONTER Season 2&#10;bo3&#10;Galorys&#10;0 - 2&#10;MIBR&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;9z&#10;2 - 1&#10;Fluxo&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Vasco&#10;0 - 2&#10;Isurus&#10;CCT Season 3 South America Series 9&#10;bo3&#10;Sashi&#10;2 - 1&#10;Omega&#10;JB Pro League Season 2&#10;bo3&#10;Aurora Young Blud&#10;0 - 2&#10;yngods&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;BetBoom&#10;1 - 2&#10;Inner Circle&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;HEROIC&#10;2 - 1&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Imperial&#10;2 - 1&#10;Bounty Hunters&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Procyon&#10;2 - 0&#10;Isurus&#10;FiRe CONTER Season 2&#10;bo3&#10;Oxuji&#10;2 - 0&#10;8Sins&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Atreides&#10;2 - 1&#10;brazylijski luz&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;Acend&#10;2 - 1&#10;Oramond&#10;A1 Gaming League Season 11&#10;bo3&#10;Results for February 28th 2026&#10;Rebels&#10;2 - 1&#10;SAW&#10;Master League Portugal Season 18&#10;bo3&#10;UNiTY&#10;2 - 1&#10;WW&#10;European Pro League Series 5&#10;bo3&#10;ex-Fingers Crossed&#10;1 - 2&#10;los kogutos&#10;JB Pro League Season 2&#10;bo3&#10;EYEBALLERS&#10;1 - 2&#10;FOKUS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;Aurora Young Blud&#10;1 - 2&#10;HAVU&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Yawara&#10;2 - 1&#10;Keyd Stars&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;R2&#10;1 - 2&#10;paiN Academy&#10;CCT Season 3 South America Series 9&#10;bo3&#10;LP&#10;1 - 0&#10;METANOIA&#10;CCT Season 3 South America Series 9&#10;def&#10;ASTRAL&#10;0 - 2&#10;Leo&#10;NODWIN Clutch Series 5&#10;bo3&#10;ECSTATIC&#10;2 - 0&#10;HYPERSPIRIT&#10;A1 Gaming League Season 11&#10;bo3&#10;KOLESIE&#10;2 - 1&#10;WW&#10;JB Pro League Season 2&#10;bo3&#10;FlyQuest&#10;0 - 2&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;QWENTRY&#10;2 - 0&#10;Acend&#10;European Pro League Series 5&#10;bo3&#10;Ursa&#10;0 - 2&#10;los kogutos&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Tricked&#10;0 - 2&#10;Inner Circle&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;MOUZ NXT&#10;0 - 2&#10;WHITEBIRD&#10;NODWIN Clutch Series 5&#10;bo3&#10;Famalicão&#10;0 - 2&#10;Fuzos&#10;Master League Portugal Season 18&#10;bo3&#10;ALGO&#10;1 - 2&#10;Omega&#10;European Pro League Series 5&#10;bo3&#10;AM&#10;2 - 1&#10;SPARTA&#10;NODWIN Clutch Series 5&#10;bo3&#10;9INE&#10;0 - 2&#10;BetBoom&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;QWENTRY&#10;2 - 0&#10;MASONIC&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;The Huns&#10;2 - 0&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;Lazer Cats&#10;1 - 0&#10;Fuzos&#10;JB Pro League Season 2&#10;def&#10;THUNDER dOWNUNDER&#10;0 - 3&#10;Mindfreak&#10;CCT Season 3 Oceania Series 4&#10;bo5&#10;BMZ&#10;0 - 2&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;THUNDER dOWNUNDER&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 Asia Closed Qualifier&#10;bo3&#10;RED Canids&#10;1 - 2&#10;Sharks&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;LAG&#10;0 - 2&#10;Voca&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;Wildcard&#10;2 - 0&#10;BOSS&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;MIBR&#10;2 - 0&#10;Bounty Hunters&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Sakura&#10;0 - 2&#10;Aether&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;FlyQuest RED&#10;0 - 2&#10;Fisher College&#10;PGL Bucharest 2026 North America Closed Qualifier&#10;bo3&#10;ODDIK&#10;0 - 2&#10;Fluxo&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Galorys&#10;2 - 0&#10;Keyd Stars&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;bo3&#10;Crashers&#10;2 - 0&#10;UNO MILLE&#10;CCT Season 3 South America Series 9&#10;bo3&#10;paiN Academy&#10;0 - 2&#10;RED Canids Academy&#10;Liga Gamers Club 2026 Serie A February Cup&#10;bo3&#10;Inner Circle&#10;1 - 2&#10;FOKUS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;yngods&#10;2 - 0&#10;Drama&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;Leo&#10;0 - 2&#10;WW&#10;JB Pro League Season 2&#10;bo3&#10;TDK&#10;1 - 2&#10;WHITEBIRD&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;Marsborne&#10;0 - 2&#10;9z&#10;BetBoom RUSH B Summit Season 2&#10;bo3&#10;Pigeons&#10;1 - 2&#10;8Sins&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;Players&#10;2 - 0&#10;Damajuana&#10;CCT Season 3 South America Series 9&#10;bo3&#10;ShindeN&#10;0 - 1&#10;Imperial&#10;PGL Bucharest 2026 South America Closed Qualifier&#10;def&#10;100 Thieves&#10;2 - 0&#10;Eternal Fire&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;HEROIC&#10;2 - 0&#10;FlyQuest&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Results for February 27th 2026&#10;fnatic&#10;1 - 2&#10;BetBoom&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;9INE&#10;1 - 2&#10;EYEBALLERS&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;ex-Fingers Crossed&#10;2 - 1&#10;ENCE Academy&#10;JB Pro League Season 2&#10;bo3&#10;Aurora Young Blud&#10;2 - 0&#10;G2 Ares&#10;CCT 2026 Contenders Europe Series 1&#10;bo3&#10;ASTRAL&#10;2 - 0&#10;OlyBet&#10;NODWIN Clutch Series 5&#10;bo3&#10;Bad Luck&#10;2 - 0&#10;ALZON&#10;CCT Season 3 South America Series 9&#10;bo3&#10;SINNERS&#10;0 - 2&#10;WHITEBIRD&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;ENCE&#10;0 - 2&#10;Eternal Fire&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;CYBERSHOKE&#10;0 - 2&#10;100 Thieves&#10;Digital Crusade DraculaN Season 5&#10;bo3&#10;Leo&#10;0 - 2&#10;WW&#10;NODWIN Clutch Series 5&#10;bo3&#10;NOVAQ&#10;2 - 1&#10;Omega&#10;Myskill Pro League Series 2&#10;bo3&#10;BMZ&#10;0 - 2&#10;The Huns&#10;MESA Pro Series Winter 2026&#10;bo3&#10;WATERMELON&#10;1 - 2&#10;HOTU&#10;Myskill Pro League Series 2&#10;bo3&#10;Fuzos&#10;0 - 2&#10;HAVU&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;KOLESIE&#10;2 - 0&#10;ARCRED&#10;JB Pro League Season 2&#10;bo3&#10;Legion&#10;2 - 0&#10;ScarX&#10;PGL Bucharest 2026 West Asia Closed Qualifier&#10;bo3&#10;ENCE Academy&#10;0 - 1&#10;MASONIC&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;def&#10;K27&#10;0 - 2&#10;TDK&#10;CCT Season 3 Europe Series 16&#10;bo3&#10;Ground Zero&#10;0 - 2&#10;Mindfreak&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;AM&#10;0 - 2&#10;ex-RUBY&#10;NODWIN Clutch Series 5&#10;bo3&#10;Rare Atom&#10;0 - 2&#10;The Huns&#10;PGL Bucharest 2026 East Asia Closed Qualifier&#10;bo3&#10;ENCE Academy&#10;2 - 0&#10;Lazer Cats&#10;European Pro League Series 5&#10;bo3&#10;Tricked&#10;2 - 0&#10;MOUZ NXT&#10;PGL Bucharest 2026 Europe Closed Qualifier&#10;bo3&#10;Sashi&#10;2 - 0&#10;VP.Prodigy&#10;JB Pro League Season 2&#10;bo3&#10;Mindfreak&#10;2 - 1&#10;Abyssal&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;los kogutos&#10;2 - 0&#10;brazylijski luz&#10;CCT Season 3 Europe Series 17 Closed Qualifier&#10;bo3&#10;HOTU&#10;1 - 2&#10;Omega&#10;Myskill Pro League Series 2&#10;bo3&#10;WATERMELON&#10;1 - 2&#10;NOVAQ&#10;Myskill Pro League Series 2&#10;bo3&#10;Biryani&#10;1 - 2&#10;ScarX&#10;PGL Bucharest 2026 West Asia Closed Qualifier&#10;bo3&#10;THUNDER dOWNUNDER&#10;2 - 1&#10;Ground Zero&#10;CCT Season 3 Oceania Series 4&#10;bo3&#10;NEXVOID&#10;0 - 2&#10;Chinggis Warriors&#10;MESA Pro Series Winter 2026&#10;bo3&#10;The Huns&#10;2 - 0&#10;Lynn Vision&#10;PGL Bucharest 2026 East Asia Closed Qualifier&#10;bo3&#10;1 - 100 of 115795&#10;FILTERS&#10;Stars&#10;All&#10;&#10;&#10;&#10;&#10;&#10;Time&#10;All time&#10;Last month&#10;Last 3 months&#10;Last 6 months&#10;Last 12 months&#10;2026&#10;2025&#10;2024&#10;2023&#10;2022&#10;2021&#10;2020&#10;2019&#10;2018&#10;2017&#10;2016&#10;2015&#10;2014&#10;2013&#10;2012&#10;Match type&#10;Map&#10;Event&#10;Player&#10;Team&#10;Game&#10;Valve ranked&#10;RECENT ACTIVITY&#10;Oramond vs illwill&#10;3&#10;Donk 95 kills on Faceit&#10;66&#10;kl1m's loan&#10;3&#10;PARIVISION vs SemperFi&#10;63&#10;Falcons: -TeSeS&#10;54&#10;ENCE Academy vs WW&#10;21&#10;HEROIC vs NRG&#10;57&#10;Senzu will implode and PassionUA will lose&#10;17&#10;Valve lawsuit&#10;262&#10;Falcons fix&#10;15&#10;magic vs TDK&#10;4&#10;Freed from the shackles of an academy, FUT have broken through&#10;42&#10;Donk 95 kills&#10;20&#10;ESL come here&#10;15&#10;Will anybody catch Niko&#10;182&#10;Fuzos vs Rebels&#10;5&#10;Astralis vs Monte&#10;16&#10;Short news: Week 8&#10;292&#10;HEROIC win DraculaN Season 5&#10;29&#10;Johnny Speeds complete lineup with nawwk&#10;26&#10;MINIGAME&#10;Timeline&#10;Play&#10;TOP 30 TRANSFERS&#10;BENCH&#10;BENCH&#10;BENCH&#10;SUB&#10;All transfers&quot;&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363194102.1.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363194102.1.html&#13;&#10;Timeout: 4 s." type="com.codeborne.selenide.ex.ElementShould">Element should have text &quot;Featured results&quot; {.widthControl}
-Element: '&lt;div class=&quot;widthControl&quot;&gt;Results
-1 - 100 of 115795
-Results for March 1st 2026
-Metizport
-2 - 0
-aimclub
-Exort Meteor Season 2
-bo3
-Legion
-2 - 1
-THUNDER dOWNUNDER
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-Legion
-0 - 2
-The Huns
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-LAG
-2 - 0
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Wildcard
-0 - 2
-Voca
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-RED Canids
-1 - 2
-9z
-BetBoom RUSH B Summit Season 2
-bo3
-Fisher College
-1 - 2
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Yawara
-0 - 2
-Imperial
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Aether
-0 - 1
-LAG
-PGL Bucharest 2026 North America Closed Qualifier
-def
-ShindeN
-2 - 0
-ex-KRÜ
-FiRe CONTER Season 2
-bo3
-Galorys
-0 - 2
-MIBR
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-9z
-2 - 1
-Fluxo
-BetBoom RUSH B Summit Season 2
-bo3
-Vasco
-0 - 2
-Isurus
-CCT Season 3 South America Series 9
-bo3
-Sashi
-2 - 1
-Omega
-JB Pro League Season 2
-bo3
-Aurora Young Blud
-0 - 2
-yngods
-CCT 2026 Contenders Europe Series 1
-bo3
-BetBoom
-1 - 2
-Inner Circle
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-HEROIC
-2 - 1
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-Imperial
-2 - 1
-Bounty Hunters
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Procyon
-2 - 0
-Isurus
-FiRe CONTER Season 2
-bo3
-Oxuji
-2 - 0
-8Sins
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Atreides
-2 - 1
-brazylijski luz
-CCT 2026 Contenders Europe Series 1
-bo3
-Acend
-2 - 1
-Oramond
-A1 Gaming League Season 11
-bo3
-Results for February 28th 2026
-Rebels
-2 - 1
-SAW
-Master League Portugal Season 18
-bo3
-UNiTY
-2 - 1
-WW
-European Pro League Series 5
-bo3
-ex-Fingers Crossed
-1 - 2
-los kogutos
-JB Pro League Season 2
-bo3
-EYEBALLERS
-1 - 2
-FOKUS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-Aurora Young Blud
-1 - 2
-HAVU
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Yawara
-2 - 1
-Keyd Stars
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-R2
-1 - 2
-paiN Academy
-CCT Season 3 South America Series 9
-bo3
-LP
-1 - 0
-METANOIA
-CCT Season 3 South America Series 9
-def
-ASTRAL
-0 - 2
-Leo
-NODWIN Clutch Series 5
-bo3
-ECSTATIC
-2 - 0
-HYPERSPIRIT
-A1 Gaming League Season 11
-bo3
-KOLESIE
-2 - 1
-WW
-JB Pro League Season 2
-bo3
-FlyQuest
-0 - 2
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-QWENTRY
-2 - 0
-Acend
-European Pro League Series 5
-bo3
-Ursa
-0 - 2
-los kogutos
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Tricked
-0 - 2
-Inner Circle
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-MOUZ NXT
-0 - 2
-WHITEBIRD
-NODWIN Clutch Series 5
-bo3
-Famalicão
-0 - 2
-Fuzos
-Master League Portugal Season 18
-bo3
-ALGO
-1 - 2
-Omega
-European Pro League Series 5
-bo3
-AM
-2 - 1
-SPARTA
-NODWIN Clutch Series 5
-bo3
-9INE
-0 - 2
-BetBoom
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-QWENTRY
-2 - 0
-MASONIC
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-The Huns
-2 - 0
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-Lazer Cats
-1 - 0
-Fuzos
-JB Pro League Season 2
-def
-THUNDER dOWNUNDER
-0 - 3
-Mindfreak
-CCT Season 3 Oceania Series 4
-bo5
-BMZ
-0 - 2
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-THUNDER dOWNUNDER
-0 - 2
-The Huns
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-RED Canids
-1 - 2
-Sharks
-BetBoom RUSH B Summit Season 2
-bo3
-LAG
-0 - 2
-Voca
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Wildcard
-2 - 0
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-MIBR
-2 - 0
-Bounty Hunters
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Sakura
-0 - 2
-Aether
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-FlyQuest RED
-0 - 2
-Fisher College
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-ODDIK
-0 - 2
-Fluxo
-BetBoom RUSH B Summit Season 2
-bo3
-Galorys
-2 - 0
-Keyd Stars
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Crashers
-2 - 0
-UNO MILLE
-CCT Season 3 South America Series 9
-bo3
-paiN Academy
-0 - 2
-RED Canids Academy
-Liga Gamers Club 2026 Serie A February Cup
-bo3
-Inner Circle
-1 - 2
-FOKUS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-yngods
-2 - 0
-Drama
-CCT 2026 Contenders Europe Series 1
-bo3
-Leo
-0 - 2
-WW
-JB Pro League Season 2
-bo3
-TDK
-1 - 2
-WHITEBIRD
-CCT Season 3 Europe Series 16
-bo3
-Marsborne
-0 - 2
-9z
-BetBoom RUSH B Summit Season 2
-bo3
-Pigeons
-1 - 2
-8Sins
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Players
-2 - 0
-Damajuana
-CCT Season 3 South America Series 9
-bo3
-ShindeN
-0 - 1
-Imperial
-PGL Bucharest 2026 South America Closed Qualifier
-def
-100 Thieves
-2 - 0
-Eternal Fire
-Digital Crusade DraculaN Season 5
-bo3
-HEROIC
-2 - 0
-FlyQuest
-Digital Crusade DraculaN Season 5
-bo3
-Results for February 27th 2026
-fnatic
-1 - 2
-BetBoom
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-9INE
-1 - 2
-EYEBALLERS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-ex-Fingers Crossed
-2 - 1
-ENCE Academy
-JB Pro League Season 2
-bo3
-Aurora Young Blud
-2 - 0
-G2 Ares
-CCT 2026 Contenders Europe Series 1
-bo3
-ASTRAL
-2 - 0
-OlyBet
-NODWIN Clutch Series 5
-bo3
-Bad Luck
-2 - 0
-ALZON
-CCT Season 3 South America Series 9
-bo3
-SINNERS
-0 - 2
-WHITEBIRD
-CCT Season 3 Europe Series 16
-bo3
-ENCE
-0 - 2
-Eternal Fire
-Digital Crusade DraculaN Season 5
-bo3
-CYBERSHOKE
-0 - 2
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-Leo
-0 - 2
-WW
-NODWIN Clutch Series 5
-bo3
-NOVAQ
-2 - 1
-Omega
-Myskill Pro League Series 2
-bo3
-BMZ
-0 - 2
-The Huns
-MESA Pro Series Winter 2026
-bo3
-WATERMELON
-1 - 2
-HOTU
-Myskill Pro League Series 2
-bo3
-Fuzos
-0 - 2
-HAVU
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-KOLESIE
-2 - 0
-ARCRED
-JB Pro League Season 2
-bo3
-Legion
-2 - 0
-ScarX
-PGL Bucharest 2026 West Asia Closed Qualifier
-bo3
-ENCE Academy
-0 - 1
-MASONIC
-CCT Season 3 Europe Series 17 Closed Qualifier
-def
-K27
-0 - 2
-TDK
-CCT Season 3 Europe Series 16
-bo3
-Ground Zero
-0 - 2
-Mindfreak
-CCT Season 3 Oceania Series 4
-bo3
-AM
-0 - 2
-ex-RUBY
-NODWIN Clutch Series 5
-bo3
-Rare Atom
-0 - 2
-The Huns
-PGL Bucharest 2026 East Asia Closed Qualifier
-bo3
-ENCE Academy
-2 - 0
-Lazer Cats
-European Pro League Series 5
-bo3
-Tricked
-2 - 0
-MOUZ NXT
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-Sashi
-2 - 0
-VP.Prodigy
-JB Pro League Season 2
-bo3
-Mindfreak
-2 - 1
-Abyssal
-CCT Season 3 Oceania Series 4
-bo3
-los kogutos
-2 - 0
-brazylijski luz
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-HOTU
-1 - 2
-Omega
-Myskill Pro League Series 2
-bo3
-WATERMELON
-1 - 2
-NOVAQ
-Myskill Pro League Series 2
-bo3
-Biryani
-1 - 2
-ScarX
-PGL Bucharest 2026 West Asia Closed Qualifier
-bo3
-THUNDER dOWNUNDER
-2 - 1
-Ground Zero
-CCT Season 3 Oceania Series 4
-bo3
-NEXVOID
-0 - 2
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-The Huns
-2 - 0
-Lynn Vision
-PGL Bucharest 2026 East Asia Closed Qualifier
-bo3
-1 - 100 of 115795
-FILTERS
-Stars
-All
-
-
-
-
-
-Time
-All time
-Last month
-Last 3 months
-Last 6 months
-Last 12 months
-2026
-2025
-2024
-2023
-2022
-2021
-2020
-2019
-2018
-2017
-2016
-2015
-2014
-2013
-2012
-Match type
-Map
-Event
-Player
-Team
-Game
-Valve ranked
-RECENT ACTIVITY
-Oramond vs illwill
-3
-Donk 95 kills on Faceit
-66
-kl1m's loan
-3
-PARIVISION vs SemperFi
-63
-Falcons: -TeSeS
-54
-ENCE Academy vs WW
-21
-HEROIC vs NRG
-57
-Senzu will implode and PassionUA will lose
-17
-Valve lawsuit
-262
-Falcons fix
-15
-magic vs TDK
-4
-Freed from the shackles of an academy, FUT have broken through
-42
-Donk 95 kills
-20
-ESL come here
-15
-Will anybody catch Niko
-182
-Fuzos vs Rebels
-5
-Astralis vs Monte
-16
-Short news: Week 8
-292
-HEROIC win DraculaN Season 5
-29
-Johnny Speeds complete lineup with nawwk
-26
-MINIGAME
-Timeline
-Play
-TOP 30 TRANSFERS
-BENCH
-BENCH
-BENCH
-SUB
-All transfers&lt;/div&gt;'
-Actual value: text=&quot;Results
-1 - 100 of 115795
-Results for March 1st 2026
-Metizport
-2 - 0
-aimclub
-Exort Meteor Season 2
-bo3
-Legion
-2 - 1
-THUNDER dOWNUNDER
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-Legion
-0 - 2
-The Huns
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-LAG
-2 - 0
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Wildcard
-0 - 2
-Voca
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-RED Canids
-1 - 2
-9z
-BetBoom RUSH B Summit Season 2
-bo3
-Fisher College
-1 - 2
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Yawara
-0 - 2
-Imperial
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Aether
-0 - 1
-LAG
-PGL Bucharest 2026 North America Closed Qualifier
-def
-ShindeN
-2 - 0
-ex-KRÜ
-FiRe CONTER Season 2
-bo3
-Galorys
-0 - 2
-MIBR
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-9z
-2 - 1
-Fluxo
-BetBoom RUSH B Summit Season 2
-bo3
-Vasco
-0 - 2
-Isurus
-CCT Season 3 South America Series 9
-bo3
-Sashi
-2 - 1
-Omega
-JB Pro League Season 2
-bo3
-Aurora Young Blud
-0 - 2
-yngods
-CCT 2026 Contenders Europe Series 1
-bo3
-BetBoom
-1 - 2
-Inner Circle
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-HEROIC
-2 - 1
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-Imperial
-2 - 1
-Bounty Hunters
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Procyon
-2 - 0
-Isurus
-FiRe CONTER Season 2
-bo3
-Oxuji
-2 - 0
-8Sins
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Atreides
-2 - 1
-brazylijski luz
-CCT 2026 Contenders Europe Series 1
-bo3
-Acend
-2 - 1
-Oramond
-A1 Gaming League Season 11
-bo3
-Results for February 28th 2026
-Rebels
-2 - 1
-SAW
-Master League Portugal Season 18
-bo3
-UNiTY
-2 - 1
-WW
-European Pro League Series 5
-bo3
-ex-Fingers Crossed
-1 - 2
-los kogutos
-JB Pro League Season 2
-bo3
-EYEBALLERS
-1 - 2
-FOKUS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-Aurora Young Blud
-1 - 2
-HAVU
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Yawara
-2 - 1
-Keyd Stars
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-R2
-1 - 2
-paiN Academy
-CCT Season 3 South America Series 9
-bo3
-LP
-1 - 0
-METANOIA
-CCT Season 3 South America Series 9
-def
-ASTRAL
-0 - 2
-Leo
-NODWIN Clutch Series 5
-bo3
-ECSTATIC
-2 - 0
-HYPERSPIRIT
-A1 Gaming League Season 11
-bo3
-KOLESIE
-2 - 1
-WW
-JB Pro League Season 2
-bo3
-FlyQuest
-0 - 2
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-QWENTRY
-2 - 0
-Acend
-European Pro League Series 5
-bo3
-Ursa
-0 - 2
-los kogutos
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Tricked
-0 - 2
-Inner Circle
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-MOUZ NXT
-0 - 2
-WHITEBIRD
-NODWIN Clutch Series 5
-bo3
-Famalicão
-0 - 2
-Fuzos
-Master League Portugal Season 18
-bo3
-ALGO
-1 - 2
-Omega
-European Pro League Series 5
-bo3
-AM
-2 - 1
-SPARTA
-NODWIN Clutch Series 5
-bo3
-9INE
-0 - 2
-BetBoom
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-QWENTRY
-2 - 0
-MASONIC
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-The Huns
-2 - 0
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-Lazer Cats
-1 - 0
-Fuzos
-JB Pro League Season 2
-def
-THUNDER dOWNUNDER
-0 - 3
-Mindfreak
-CCT Season 3 Oceania Series 4
-bo5
-BMZ
-0 - 2
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-THUNDER dOWNUNDER
-0 - 2
-The Huns
-PGL Bucharest 2026 Asia Closed Qualifier
-bo3
-RED Canids
-1 - 2
-Sharks
-BetBoom RUSH B Summit Season 2
-bo3
-LAG
-0 - 2
-Voca
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-Wildcard
-2 - 0
-BOSS
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-MIBR
-2 - 0
-Bounty Hunters
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Sakura
-0 - 2
-Aether
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-FlyQuest RED
-0 - 2
-Fisher College
-PGL Bucharest 2026 North America Closed Qualifier
-bo3
-ODDIK
-0 - 2
-Fluxo
-BetBoom RUSH B Summit Season 2
-bo3
-Galorys
-2 - 0
-Keyd Stars
-PGL Bucharest 2026 South America Closed Qualifier
-bo3
-Crashers
-2 - 0
-UNO MILLE
-CCT Season 3 South America Series 9
-bo3
-paiN Academy
-0 - 2
-RED Canids Academy
-Liga Gamers Club 2026 Serie A February Cup
-bo3
-Inner Circle
-1 - 2
-FOKUS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-yngods
-2 - 0
-Drama
-CCT 2026 Contenders Europe Series 1
-bo3
-Leo
-0 - 2
-WW
-JB Pro League Season 2
-bo3
-TDK
-1 - 2
-WHITEBIRD
-CCT Season 3 Europe Series 16
-bo3
-Marsborne
-0 - 2
-9z
-BetBoom RUSH B Summit Season 2
-bo3
-Pigeons
-1 - 2
-8Sins
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-Players
-2 - 0
-Damajuana
-CCT Season 3 South America Series 9
-bo3
-ShindeN
-0 - 1
-Imperial
-PGL Bucharest 2026 South America Closed Qualifier
-def
-100 Thieves
-2 - 0
-Eternal Fire
-Digital Crusade DraculaN Season 5
-bo3
-HEROIC
-2 - 0
-FlyQuest
-Digital Crusade DraculaN Season 5
-bo3
-Results for February 27th 2026
-fnatic
-1 - 2
-BetBoom
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-9INE
-1 - 2
-EYEBALLERS
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-ex-Fingers Crossed
-2 - 1
-ENCE Academy
-JB Pro League Season 2
-bo3
-Aurora Young Blud
-2 - 0
-G2 Ares
-CCT 2026 Contenders Europe Series 1
-bo3
-ASTRAL
-2 - 0
-OlyBet
-NODWIN Clutch Series 5
-bo3
-Bad Luck
-2 - 0
-ALZON
-CCT Season 3 South America Series 9
-bo3
-SINNERS
-0 - 2
-WHITEBIRD
-CCT Season 3 Europe Series 16
-bo3
-ENCE
-0 - 2
-Eternal Fire
-Digital Crusade DraculaN Season 5
-bo3
-CYBERSHOKE
-0 - 2
-100 Thieves
-Digital Crusade DraculaN Season 5
-bo3
-Leo
-0 - 2
-WW
-NODWIN Clutch Series 5
-bo3
-NOVAQ
-2 - 1
-Omega
-Myskill Pro League Series 2
-bo3
-BMZ
-0 - 2
-The Huns
-MESA Pro Series Winter 2026
-bo3
-WATERMELON
-1 - 2
-HOTU
-Myskill Pro League Series 2
-bo3
-Fuzos
-0 - 2
-HAVU
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-KOLESIE
-2 - 0
-ARCRED
-JB Pro League Season 2
-bo3
-Legion
-2 - 0
-ScarX
-PGL Bucharest 2026 West Asia Closed Qualifier
-bo3
-ENCE Academy
-0 - 1
-MASONIC
-CCT Season 3 Europe Series 17 Closed Qualifier
-def
-K27
-0 - 2
-TDK
-CCT Season 3 Europe Series 16
-bo3
-Ground Zero
-0 - 2
-Mindfreak
-CCT Season 3 Oceania Series 4
-bo3
-AM
-0 - 2
-ex-RUBY
-NODWIN Clutch Series 5
-bo3
-Rare Atom
-0 - 2
-The Huns
-PGL Bucharest 2026 East Asia Closed Qualifier
-bo3
-ENCE Academy
-2 - 0
-Lazer Cats
-European Pro League Series 5
-bo3
-Tricked
-2 - 0
-MOUZ NXT
-PGL Bucharest 2026 Europe Closed Qualifier
-bo3
-Sashi
-2 - 0
-VP.Prodigy
-JB Pro League Season 2
-bo3
-Mindfreak
-2 - 1
-Abyssal
-CCT Season 3 Oceania Series 4
-bo3
-los kogutos
-2 - 0
-brazylijski luz
-CCT Season 3 Europe Series 17 Closed Qualifier
-bo3
-HOTU
-1 - 2
-Omega
-Myskill Pro League Series 2
-bo3
-WATERMELON
-1 - 2
-NOVAQ
-Myskill Pro League Series 2
-bo3
-Biryani
-1 - 2
-ScarX
-PGL Bucharest 2026 West Asia Closed Qualifier
-bo3
-THUNDER dOWNUNDER
-2 - 1
-Ground Zero
-CCT Season 3 Oceania Series 4
-bo3
-NEXVOID
-0 - 2
-Chinggis Warriors
-MESA Pro Series Winter 2026
-bo3
-The Huns
-2 - 0
-Lynn Vision
-PGL Bucharest 2026 East Asia Closed Qualifier
-bo3
-1 - 100 of 115795
-FILTERS
-Stars
-All
-
-
-
-
-
-Time
-All time
-Last month
-Last 3 months
-Last 6 months
-Last 12 months
-2026
-2025
-2024
-2023
-2022
-2021
-2020
-2019
-2018
-2017
-2016
-2015
-2014
-2013
-2012
-Match type
-Map
-Event
-Player
-Team
-Game
-Valve ranked
-RECENT ACTIVITY
-Oramond vs illwill
-3
-Donk 95 kills on Faceit
-66
-kl1m's loan
-3
-PARIVISION vs SemperFi
-63
-Falcons: -TeSeS
-54
-ENCE Academy vs WW
-21
-HEROIC vs NRG
-57
-Senzu will implode and PassionUA will lose
-17
-Valve lawsuit
-262
-Falcons fix
-15
-magic vs TDK
-4
-Freed from the shackles of an academy, FUT have broken through
-42
-Donk 95 kills
-20
-ESL come here
-15
-Will anybody catch Niko
-182
-Fuzos vs Rebels
-5
-Astralis vs Monte
-16
-Short news: Week 8
-292
-HEROIC win DraculaN Season 5
-29
-Johnny Speeds complete lineup with nawwk
-26
-MINIGAME
-Timeline
-Play
-TOP 30 TRANSFERS
-BENCH
-BENCH
-BENCH
-SUB
-All transfers&quot;
-Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363194102.1.png
-Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772363194102.1.html
+  <testcase name="Проверка кликабельности Results" classname="tests.mainPageTests" time="4.602">
+    <failure message="com.codeborne.selenide.ex.ElementNotFound: Element not found {#navBarContainerFull}&#13;&#10;Expected: exist&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572600998.1.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572600998.1.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {#navBarContainerFull}
+Expected: exist
+Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572600998.1.png
+Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572600998.1.html
 Timeout: 4 s.
-	at app//com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:146)
-	at app//com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
-	at app//com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
-	at app//com.codeborne.selenide.commands.Should.execute(Should.java:24)
-	at app//com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
-	at app//com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
-	at app//com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
-	at app//com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
-	at app//com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
-	at app/jdk.proxy3/jdk.proxy3.$Proxy37.shouldHave(Unknown Source)
-	at app//tests.mainPageTests.CheckResultsButton(MainPageTests.java:70)
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:126)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsClickable(WebElementSource.java:169)
+	at com.codeborne.selenide.commands.Click.findElement(Click.java:53)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy38.click(Unknown Source)
+	at tests.mainPageTests.CheckResultsButton(MainPageTests.java:69)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+  (Session info: chrome=145.0.7632.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [889d0546b1e03ed935a1a15a6ea4b54d, findElement {value=#navBarContainerFull, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\garri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58944}, goog:processID: 16776, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58944/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 889d0546b1e03ed935a1a15a6ea4b54d
+	at jdk.internal.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
+	... 14 more
 </failure>
   </testcase>
-  <testcase name="Проверка вверхней панели" classname="tests.mainPageTests" time="3.523"/>
-  <testcase name="Проверка кликабельности Matches" classname="tests.mainPageTests" time="4.46"/>
+  <testcase name="Проверка вверхней панели" classname="tests.mainPageTests" time="4.854">
+    <failure message="com.codeborne.selenide.ex.ElementNotFound: Element not found {#navBarContainerFull}&#13;&#10;Expected: text &quot;Matches&quot;&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572605619.2.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572605619.2.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {#navBarContainerFull}
+Expected: text &quot;Matches&quot;
+Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572605619.2.png
+Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572605619.2.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy38.shouldHave(Unknown Source)
+	at pages.MainPage.CheckTopBar(MainPage.java:14)
+	at tests.mainPageTests.CheckElementsOnTopBar(MainPageTests.java:21)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+  (Session info: chrome=145.0.7632.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [889d0546b1e03ed935a1a15a6ea4b54d, findElement {value=#navBarContainerFull, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\garri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58944}, goog:processID: 16776, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58944/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 889d0546b1e03ed935a1a15a6ea4b54d
+	at jdk.internal.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
+	... 10 more
+</failure>
+  </testcase>
+  <testcase name="Проверка кликабельности Matches" classname="tests.mainPageTests" time="4.602">
+    <failure message="com.codeborne.selenide.ex.ElementNotFound: Element not found {#navBarContainerFull}&#13;&#10;Expected: exist&#13;&#10;Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572610465.3.png&#13;&#10;Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572610465.3.html&#13;&#10;Timeout: 4 s.&#13;&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}" type="com.codeborne.selenide.ex.ElementNotFound">Element not found {#navBarContainerFull}
+Expected: exist
+Screenshot: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572610465.3.png
+Page source: file:/C:/Users/garri/IdeaProjects/hltv-tests/build/reports/tests/1772572610465.3.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:89)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:129)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:126)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:123)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsClickable(WebElementSource.java:169)
+	at com.codeborne.selenide.commands.Click.findElement(Click.java:53)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:39)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:137)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy38.click(Unknown Source)
+	at tests.mainPageTests.CheckResultsPage(MainPageTests.java:51)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#navBarContainerFull&quot;}
+  (Session info: chrome=145.0.7632.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [889d0546b1e03ed935a1a15a6ea4b54d, findElement {value=#navBarContainerFull, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\garri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58944}, goog:processID: 16776, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58944/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 889d0546b1e03ed935a1a15a6ea4b54d
+	at jdk.internal.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:67)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:38)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:29)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:113)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:112)
+	... 14 more
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-мар. 01, 2026 4:06:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 04, 2026 2:16:26 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 143; Please update to a Selenium version that supports CDP version 145
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.13.0 / Selenium 4.39.0 / chrome 145.0.7632.117 windows
-[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772363184002.0.html]]
-[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772363184002.0.png]]
-[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772363194102.1.html]]
-[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772363194102.1.png]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572596348.0.html]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572596348.0.png]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572600998.1.html]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572600998.1.png]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572605619.2.html]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572605619.2.png]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572610465.3.html]]
+[Test worker] INFO com.codeborne.selenide.impl.AttachmentPrinter - [[ATTACHMENT|C:\Users\garri\IdeaProjects\hltv-tests\build\reports\tests\1772572610465.3.png]]
 ]]></system-err>
 </testsuite>
