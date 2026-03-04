@@ -32,6 +32,7 @@ class mainPageTests extends TestBase {
     }
 
     @Test
+    @Tag("regress")
     @DisplayName("Проверка основных элементов страницы")
     void CheckMidElements() {
         TopBar.find(byText("News")).click();
