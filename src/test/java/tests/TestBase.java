@@ -22,7 +22,7 @@ public class TestBase {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        open("https://www.hltv.org/");
+        open("https://uspu.ru/");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,

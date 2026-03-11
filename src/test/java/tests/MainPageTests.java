@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.*;
 import pages.MainPage;
@@ -8,68 +7,78 @@ import pages.MainPage;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static pages.MainPage.TopBar;
+import static pages.MainPage.*;
 
 @Tag("regress")
 class mainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
+    @DisplayName("Check main page")
     @Test
-    @DisplayName("Проверка вверхней панели")
-    void CheckElementsOnTopBar() {
-        MainPage.CheckTopBar("Matches");
-        MainPage.CheckTopBar("Results");
-        MainPage.CheckTopBar("Events");
-        MainPage.CheckTopBar("Players");
-        MainPage.CheckTopBar("Stats");
-        MainPage.CheckTopBar("Fantasy");
-        MainPage.CheckTopBar("Forum");
-        MainPage.CheckTopBar("Media");
-        MainPage.CheckTopBar("Betting");
-        MainPage.CheckTopBar("Live");
-        Selenide.sleep(3000);
+    void CheckMainBlockMenu() {
+        mainPage.checkMainBar("Университет");
+        mainPage.checkMainBar("Образование");
+        mainPage.checkMainBar("Наука");
+        mainPage.checkMainBar("Контакты");
+        mainPage.checkMainBar("Пресс-служба");
+        mainPage.checkMainBar("Расписание");
     }
 
+    @DisplayName("Проверка кликабельности Университет")
     @Test
-    @Tag("regress")
-    @DisplayName("Проверка основных элементов страницы")
-    void CheckMidElements() {
-        TopBar.find(byText("News")).click();
-        MainPage.CheckMidBar("TODAY'S MATCHES");
-        MainPage.CheckMidBar("RECENT ACTIVITY");
-        MainPage.CheckMidBar("TOP 30 TRANSFERS");
-        MainPage.CheckMidBar("EVENTS");
-        MainPage.CheckMidBar("RANKING");
-        MainPage.CheckMidBar("Today's news");
-        Selenide.sleep(3000);
+    @Step("Проверка кликабельности Университет")
+    void CheckUniversityButton() {
+        mainPage.clickpage("Университет");
+        mainPage.checkpage("Университет");
     }
 
-    @DisplayName("Проверка кликабельности Matches")
+    @DisplayName("Проверка кликабельности Образование")
     @Test
-    @Step("Проверка кликабельности Matches")
-    void CheckResultsPage() {
-        TopBar.find(byText("Matches")).click();
-        $(".new-standardPageGrid").shouldHave(text("Upcoming Counter-Strike matches"));
-        Selenide.sleep(3000);
+    @Step("Проверка кликабельности Образование")
+    void CheckEducationButton() {
+        mainPage.clickpage("Образование");
+        mainPage.checkpage("Образовательная деятельность в УрГПУ");
     }
 
-    @DisplayName("Проверка кликабельности Stats")
+    @DisplayName("Проверка кликабельности Наука")
     @Test
-    @Step("Проверка кликабельности Stats")
-    void CheckStatsButton() {
-        TopBar.find(byText("Stats")).click();
-        $(".widthControl").shouldHave(text("Best players"));
-        Selenide.sleep(3000);
+    @Step("Проверка кликабельности Наука")
+    void CheckScienceButton() {
+        mainPage.clickpage("Наука");
+        mainPage.checkpage("Учить и учиться!");
     }
 
-    @DisplayName("Проверка кликабельности Results")
+    @DisplayName("Проверка кликабельности Студенту")
     @Test
-    @Step("Проверка кликабельности Results")
-    void CheckResultsButton() {
-        TopBar.find(byText("Results")).click();
-        $(".widthControl").shouldHave(text("Featured results"));
-        Selenide.sleep(3000);
+    @Step("Проверка кликабельности Студенту")
+    void CheckStudentButton() {
+        mainPage.clickpage("Студенту");
+        mainPage.checkpage("Лучшие студенты УрГПУ");
+    }
+
+    @DisplayName("Проверка кликабельности Контакты")
+    @Test
+    @Step("Проверка кликабельности Контакты")
+    void CheckContactButton() {
+        mainPage.clickpage("Контакты");
+        mainPage.checkpage("Контактная информация и реквизиты");
+    }
+
+    @DisplayName("Проверка кликабельности Пресс-служба")
+    @Test
+    @Step("Проверка кликабельности Пресс-служба")
+    void CheckNewsButton() {
+        mainPage.clickpage("Пресс-служба");
+        mainPage.checkpage("Мы делаем новости интересными");
+    }
+
+    @DisplayName("Проверка кликабельности Расписание")
+    @Test
+    @Step("Проверка кликабельности Расписание")
+    void CheckScheduleButton() {
+        mainPage.clickpage("Расписание");
+        mainPage.checkpage("Расписание занятий");
     }
 
     @DisplayName("Ошибочная авторизация пользователя")

@@ -7,14 +7,21 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class MainPage {
 
-    public static SelenideElement TopBar = $("#navBarContainerFull");
-    public static SelenideElement MidBar = $(".colCon");
+    public static SelenideElement TopBar = $(".mainarea");
+    public static SelenideElement BasicName = $(".wrapper");
 
-    public static void CheckTopBar(String value) {
+    public MainPage checkMainBar(String value) {
         TopBar.shouldHave(text(value));
+        return this;
     }
 
-    public static void CheckMidBar(String value) {
-        MidBar.shouldHave(text(value));
+    public MainPage checkpage(String value) {
+        BasicName.shouldHave(text(value));
+        return this;
+    }
+
+    public MainPage clickpage(String value) {
+        TopBar.shouldHave(text(value)).click();
+        return this;
     }
 }
