@@ -5,7 +5,7 @@
     "comment": " ",
     "reportLink": "",
     "language": "ru",
-    "allureFolder": "http://localhost:8080/job/Urgpu/allure/",
+    "allureFolder": "allure-report\\widgets\\summary.json",
     "enableChart": true
   },
   "telegram": {
