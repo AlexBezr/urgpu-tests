@@ -8,40 +8,54 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
+import java.util.logging.Level;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
+import static helpers.Attach.*;
 
 public class TestBase {
 
+    static LoggingPreferences logPrefs = new LoggingPreferences();
+    static ChromeOptions options = new ChromeOptions();
+
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.BROWSER, Level.ALL);
+
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("goog:loggingPrefs", logPrefs);
+        options.setCapability("selenoid:options", Map.of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        open("https://uspu.ru/");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        )); //Настройки для Selenoid (включение VNC и записи видео).
-        Configuration.browserCapabilities = capabilities; //Присвоение настроек конфигурации браузера
+        Configuration.browserCapabilities = options;
+
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @BeforeEach //метод выполняется перед каждым тестом
     void setUpBeforeEach() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()); //включение слушателя Аллюр
+        open("https://uspu.ru/");
     }
 
     @AfterEach //выполняется после каждого теста
     void addAttachments() {
-        Attach.screenshotAs("Screenshot"); //Скриншот последнего состояния браузера.
-        Attach.pageSource(); //Исходный код страницы.
-        Attach.browserConsoleLogs(); //Логи консоли браузера.
-        Attach.addVideo(); //Видео записи теста.
-//        Selenide.closeWebDriver(); //Закрывает браузер.
+        screenshotAs("Screenshot"); //Скриншот последнего состояния браузера.
+        pageSource(); //Исходный код страницы.
+        browserConsoleLogs(); //Логи консоли браузера.
+        addVideo(); //Видео записи теста.
+        closeWebDriver(); //Закрывает браузер.
     }
 }

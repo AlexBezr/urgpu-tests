@@ -1,9 +1,11 @@
 package helpers;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,18 +40,15 @@ public class Attach {
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo() {
-        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-                + getVideoUrl()
-                + "'type='video/mp4'></video></body></html>";
+        return "<html><body><video width='100%' height='100%' controls autoplay>" +
+                "<source src='" + getVideoUrl() + "' type='video/mp4'>" +
+                "</video></body></html>";
     }
 
-    public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
-        try {
-            return new URL(videoUrl);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public static String getVideoUrl() {
+        String sessionId = ((RemoteWebDriver) WebDriverRunner.getWebDriver()).getSessionId().toString();
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        System.out.println("VIDEO URL: " + videoUrl);
+        return videoUrl;
     }
 }
